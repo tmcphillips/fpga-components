@@ -27,7 +27,7 @@ int next_byte() {
 		bool bit25 = r & (1 << 25);
 		bool bit24 = r & (1 << 24);
 
-		bool newbit = bit31 ^ bit29 ^ bit25 ^ bit24;
+		int newbit = bit31 ^ bit29 ^ bit25 ^ bit24;
 
 		r = (r << 1) | newbit;
 	}
