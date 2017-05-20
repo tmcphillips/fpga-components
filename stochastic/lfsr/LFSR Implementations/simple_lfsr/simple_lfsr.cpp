@@ -4,10 +4,6 @@
 int next_byte();
 
 int main() {
-	
-	for (int i = 0; i < 100000; i++) {
-		next_byte();
-	}
 
 	for (int i = 0; i < 20; ++i) {
 		std::cout << next_byte() << std::endl;
