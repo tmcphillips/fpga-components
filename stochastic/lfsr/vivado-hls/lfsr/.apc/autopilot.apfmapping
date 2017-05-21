@@ -3,5 +3,7 @@
   <source>
     <originFiles name="simple_lfsr.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr.cpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="simple_lfsr.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
