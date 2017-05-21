@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="simple_lfsr.cpp">
+    <ClCompile Include="..\..\src\cpp\simple_lfsr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
