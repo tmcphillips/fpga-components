@@ -8,8 +8,41 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
 @I [LIC-101] Checked out feature [xczu3eg-es1]
 @I [HLS-10] Setting target device to 'xczu3eg-sfva625-1-i-es1'
-@I [SIM-2] *************** CSIM start ***************
-@W [SIM-51] HLS only supports CLANG compiler in Linux.
-@I [SIM-4] CSIM will launch GCC as the compiler.
-@I [SIM-1] CSim done with 0 errors.
-@I [SIM-3] *************** CSIM finish ***************
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Analyzing design file '../src/cpp/simple_lfsr.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 96.289 ; gain = 47.367
+@I [HLS-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 96.289 ; gain = 47.367
+@I [HLS-10] Starting code transformations ...
+@I [HLS-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 97.695 ; gain = 48.773
+@I [HLS-10] Checking synthesizability ...
+@I [HLS-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 99.820 ; gain = 50.898
+@I [XFORM-11] Balancing expressions in function 'next_byte' (../src/cpp/simple_lfsr.cpp:19:25)...3 expression(s) balanced.
+@I [HLS-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 123.934 ; gain = 75.012
+@I [HLS-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 124.152 ; gain = 75.230
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'next_byte' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Implementing module 'next_byte' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111]  Elapsed time: 22.642 seconds; current allocated memory: 80.941 MB.
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111]  Elapsed time: 0.272 seconds; current allocated memory: 80.947 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'next_byte' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on function 'next_byte' to 'ap_ctrl_hs'.
+@W [RTGEN-101] Register 'r' is power-on initialization.
+@I [RTGEN-100] Finished creating RTL model for 'next_byte'.
+@I [HLS-111]  Elapsed time: 0.153 seconds; current allocated memory: 80.961 MB.
+@I [HLS-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 124.152 ; gain = 75.230
+@I [SYSC-301] Generating SystemC RTL for next_byte.
+@I [VHDL-304] Generating VHDL RTL for next_byte.
+@I [VLOG-307] Generating Verilog RTL for next_byte.
+@I [HLS-112] Total elapsed time: 24.12 seconds; peak allocated memory: 80.961 MB.
