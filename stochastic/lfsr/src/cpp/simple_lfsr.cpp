@@ -16,7 +16,7 @@ int next_byte() {
 
 	static int r = 0xc5705a19;
 
-	for (int i = 0; i < 8; ++i) {
+	compute_random_bits:for (int i = 0; i < 8; ++i) {
 
 		bool bit31 = r & (1 << 31);
 		bool bit29 = r & (1 << 29);
