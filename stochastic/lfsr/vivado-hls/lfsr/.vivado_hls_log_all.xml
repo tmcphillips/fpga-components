@@ -12,6 +12,7 @@
   <warningLogs>
     <logs>
       <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-21T22:49:08.404-0700" type="Warning"/>
         <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-21T20:18:00.178-0700" type="Warning"/>
       </synLog>
       <simLog/>
