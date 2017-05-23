@@ -6,7 +6,12 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:30:47.429-0700"/>
+        <logs message="@E Simulation failed." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:30:47.381-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:20:55.488-0700"/>
+        <logs message="@E Simulation failed." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:20:55.464-0700"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
@@ -18,7 +23,15 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T20:02:19.466-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:34:20.667-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:30:44.894-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:22:38.438-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:21:43.336-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:20:53.097-0700" type="Warning"/>
+        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T16:20:12.793-0700" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

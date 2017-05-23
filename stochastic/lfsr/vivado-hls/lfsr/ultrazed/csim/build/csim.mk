@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../src/cpp/simple_lfsr.cpp
+HLS_SOURCES = ../../../../../src/cpp/simple_lfsr_tb.cpp ../../../../../src/cpp/simple_lfsr.cpp
 
 TARGET := csim.exe
 
@@ -68,6 +68,12 @@ include ./Makefile.rules
 all: $(TARGET)
 
 
+
+$(ObjDir)/simple_lfsr_tb.o: ../../../../../src/cpp/simple_lfsr_tb.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../src/cpp/simple_lfsr_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/simple_lfsr_tb.d
 
 $(ObjDir)/simple_lfsr.o: ../../../../../src/cpp/simple_lfsr.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../src/cpp/simple_lfsr.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

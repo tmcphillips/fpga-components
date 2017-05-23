@@ -28,6 +28,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
+									<listOptionValue builtIn="false" value="C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 								</option>
@@ -45,6 +46,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
+									<listOptionValue builtIn="false" value="C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 								</option>
@@ -79,7 +81,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="ultrazed|ultrazed-unrolled-loop|source/simple_lfsr.cpp|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ultrazed|ultrazed-unrolled-loop|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -112,6 +114,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
+									<listOptionValue builtIn="false" value="C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 								</option>
@@ -124,6 +127,7 @@
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/auto_cc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/ap_sysc"/>
+									<listOptionValue builtIn="false" value="C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2016.4/include/etc"/>
 								</option>
@@ -153,7 +157,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="ultrazed|ultrazed-unrolled-loop|source/simple_lfsr.cpp|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ultrazed|ultrazed-unrolled-loop|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

@@ -42,9 +42,9 @@
 			<location>C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr.cpp</location>
 		</link>
 		<link>
-			<name>testbench/simple_lfsr.cpp</name>
+			<name>testbench/simple_lfsr_tb.cpp</name>
 			<type>1</type>
-			<location>C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr.cpp</location>
+			<location>C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp</location>
 		</link>
 		<link>
 			<name>ultrazed/constraints</name>

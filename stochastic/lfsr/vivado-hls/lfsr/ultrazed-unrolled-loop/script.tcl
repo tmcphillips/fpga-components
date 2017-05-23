@@ -6,9 +6,9 @@
 open_project lfsr
 set_top next_byte
 add_files ../src/cpp/simple_lfsr.cpp
-add_files -tb ../src/cpp/simple_lfsr.cpp
+add_files -tb ../src/cpp/simple_lfsr_tb.cpp
 open_solution "ultrazed-unrolled-loop"
-set_part {xczu3eg-sfva625-1-i-es1}
+set_part {xczu3eg-sfva625-1-i-es1} -tool vivado
 create_clock -period 10 -name default
 source "./lfsr/ultrazed-unrolled-loop/directives.tcl"
 csim_design

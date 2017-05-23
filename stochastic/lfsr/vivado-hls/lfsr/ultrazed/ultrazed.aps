@@ -1,10 +1,17 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="10"/>
+    </clockList>
     <config>
         <schedule model="next_byte"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
+            <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -58,13 +65,7 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus"/>
-        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus_fpv7"/>
     </libraryList>
-    <downStreamTool>
-        <DownStreamTool name="vivado"/>
-    </downStreamTool>
-    <clockList>
-        <clock default="false" name="default" period="10"/>
-    </clockList>
 </solution>
 

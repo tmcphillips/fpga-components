@@ -1,8 +1,7 @@
 INFO: [SIM 2] *************** CSIM start ***************
 WARNING: [SIM 51] HLS only supports CLANG compiler in Linux.
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../../src/cpp/simple_lfsr.cpp in debug mode
-   Generating csim.exe
+make: `csim.exe' is up to date.
 52
 138
 184
