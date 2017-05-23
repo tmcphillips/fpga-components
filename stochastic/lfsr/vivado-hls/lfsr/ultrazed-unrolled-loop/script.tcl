@@ -4,8 +4,9 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project lfsr
-set_top next_byte
+set_top simple_lfsr_next_byte
 add_files ../src/cpp/simple_lfsr.cpp
+add_files ../src/cpp/simple_lfsr_tb.cpp
 add_files -tb ../src/cpp/simple_lfsr_tb.cpp
 open_solution "ultrazed-unrolled-loop"
 set_part {xczu3eg-sfva625-1-i-es1} -tool vivado

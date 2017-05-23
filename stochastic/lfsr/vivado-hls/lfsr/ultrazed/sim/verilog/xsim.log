@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 22 21:24:52 2017
+# Process ID: 24600
+# Current directory: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/simple_lfsr_next_byte/xsim_script.tcl}
+# Log file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/xsim.log
+# Journal file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Xilinx/Vivado/2016.4/scripts/init.tcl'
+source xsim.dir/simple_lfsr_next_byte/xsim_script.tcl
+# xsim {simple_lfsr_next_byte} -autoloadwcfg -tclbatch {simple_lfsr_next_byte.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source simple_lfsr_next_byte.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 20 [0.00%] @ "125000"
+// RTL Simulation : 1 / 20 [0.00%] @ "235000"
+// RTL Simulation : 2 / 20 [0.00%] @ "335000"
+// RTL Simulation : 3 / 20 [0.00%] @ "435000"
+// RTL Simulation : 4 / 20 [0.00%] @ "535000"
+// RTL Simulation : 5 / 20 [0.00%] @ "635000"
+// RTL Simulation : 6 / 20 [0.00%] @ "735000"
+// RTL Simulation : 7 / 20 [0.00%] @ "835000"
+// RTL Simulation : 8 / 20 [0.00%] @ "935000"
+// RTL Simulation : 9 / 20 [0.00%] @ "1035000"
+// RTL Simulation : 10 / 20 [0.00%] @ "1135000"
+// RTL Simulation : 11 / 20 [0.00%] @ "1235000"
+// RTL Simulation : 12 / 20 [0.00%] @ "1335000"
+// RTL Simulation : 13 / 20 [0.00%] @ "1435000"
+// RTL Simulation : 14 / 20 [0.00%] @ "1535000"
+// RTL Simulation : 15 / 20 [0.00%] @ "1635000"
+// RTL Simulation : 16 / 20 [0.00%] @ "1735000"
+// RTL Simulation : 17 / 20 [0.00%] @ "1835000"
+// RTL Simulation : 18 / 20 [0.00%] @ "1935000"
+// RTL Simulation : 19 / 20 [0.00%] @ "2035000"
+// RTL Simulation : 20 / 20 [0.00%] @ "2135000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2175 ns : File "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/simple_lfsr_next_byte.autotb.v" Line 203
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon May 22 21:24:58 2017...

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 22 21:24:52 2017
+# Process ID: 24600
+# Current directory: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/simple_lfsr_next_byte/xsim_script.tcl}
+# Log file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/xsim.log
+# Journal file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/simple_lfsr_next_byte/xsim_script.tcl
+source simple_lfsr_next_byte.tcl

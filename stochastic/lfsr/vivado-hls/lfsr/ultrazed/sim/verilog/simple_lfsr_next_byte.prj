@@ -1,0 +1,3 @@
+sv xil_defaultlib "simple_lfsr_next_byte.autotb.v"
+sv xil_defaultlib "simple_lfsr_next_byte.v"
+

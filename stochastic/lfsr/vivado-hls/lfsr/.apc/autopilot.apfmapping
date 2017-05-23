@@ -2,6 +2,7 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="simple_lfsr.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr.cpp"/>
+    <originFiles name="simple_lfsr_tb.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr_tb.cpp"/>
   </source>
   <testbench>
     <originFiles name="simple_lfsr_tb.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr_tb.cpp"/>

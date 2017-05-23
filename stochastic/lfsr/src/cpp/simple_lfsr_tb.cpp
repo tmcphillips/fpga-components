@@ -8,12 +8,16 @@ using std::cout;
 using std::endl;
 using std::stringstream;
 
+int simple_lfsr_next_byte() {
+	return simple_lfsr::next_byte();
+}
+
 int main() {
 
 	stringstream ss;
 
 	for (int i = 0; i < 20; ++i) {
-		ss << simple_lfsr::next_byte() << endl;
+		ss << simple_lfsr_next_byte() << endl;
 	}
 
 	cout << ss.str();

@@ -1,7 +1,8 @@
-<project xmlns="com.autoesl.autopilot.project" name="lfsr" top="next_byte">
+<project xmlns="com.autoesl.autopilot.project" name="lfsr" top="simple_lfsr_next_byte">
     <files>
-        <file name="../src/cpp/simple_lfsr.cpp" sc="0" tb="false" cflags=""/>
         <file name="../../../src/cpp/simple_lfsr_tb.cpp" sc="0" tb="1" cflags=""/>
+        <file name="../src/cpp/simple_lfsr.cpp" sc="0" tb="false" cflags=""/>
+        <file name="../src/cpp/simple_lfsr_tb.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <includePaths/>
     <libraryPaths/>

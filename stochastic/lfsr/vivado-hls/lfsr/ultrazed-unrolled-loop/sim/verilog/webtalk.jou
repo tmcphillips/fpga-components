@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon May 22 21:07:22 2017
+# Process ID: 25680
+# Current directory: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/xsim.dir/simple_lfsr_next_byte/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/webtalk.log
+# Journal file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/xsim.dir/simple_lfsr_next_byte/webtalk/xsim_webtalk.tcl -notrace
