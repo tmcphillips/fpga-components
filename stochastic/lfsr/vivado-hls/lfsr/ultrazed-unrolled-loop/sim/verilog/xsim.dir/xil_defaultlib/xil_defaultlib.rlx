@@ -2,5 +2,5 @@
 2016.4
 Jan 23 2017
 19:37:30
-C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_byte.autotb.v,1495512426,systemVerilog,,,,apatb_simple_lfsr_next_byte_top,C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
-C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_byte.v,1495512357,systemVerilog,,,,simple_lfsr_next_byte,C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_random_bits.autotb.v,1495677273,systemVerilog,,,,apatb_simple_lfsr_next_random_bits_top,C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,
+C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_random_bits.v,1495677233,systemVerilog,,,,simple_lfsr_next_random_bits,C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini,ieee_proposed=./ieee_proposed,,,,,,

@@ -3,4 +3,4 @@
 ## Please DO NOT edit it.
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
-set_directive_unroll "next_byte/compute_random_bits"
+set_directive_unroll "next_random_bits/compute_random_bits"

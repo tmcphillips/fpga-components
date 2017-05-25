@@ -1,6 +1,6 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
     <sourceFile name="">
-        <directive functionName="next_byte" label="compute_random_bits" functionLabel="">
+        <directive functionName="next_random_bits" label="compute_random_bits" functionLabel="">
             <pragma name="UNROLL"/>
         </directive>
     </sourceFile>

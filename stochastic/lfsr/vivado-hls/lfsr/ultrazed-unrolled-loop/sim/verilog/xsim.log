@@ -2,19 +2,19 @@
 # xsim v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Mon May 22 21:07:17 2017
-# Process ID: 26196
+# Start of session at: Wed May 24 18:54:40 2017
+# Process ID: 28868
 # Current directory: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/simple_lfsr_next_byte/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/simple_lfsr_next_random_bits/xsim_script.tcl}
 # Log file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/xsim.log
 # Journal file: C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog\xsim.jou
 #-----------------------------------------------------------
 Sourcing tcl script 'C:/Xilinx/Vivado/2016.4/scripts/init.tcl'
-source xsim.dir/simple_lfsr_next_byte/xsim_script.tcl
-# xsim {simple_lfsr_next_byte} -autoloadwcfg -tclbatch {simple_lfsr_next_byte.tcl}
+source xsim.dir/simple_lfsr_next_random_bits/xsim_script.tcl
+# xsim {simple_lfsr_next_random_bits} -autoloadwcfg -tclbatch {simple_lfsr_next_random_bits.tcl}
 Vivado Simulator 2016.4
 Time resolution is 1 ps
-source simple_lfsr_next_byte.tcl
+source simple_lfsr_next_random_bits.tcl
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -44,6 +44,6 @@ source simple_lfsr_next_byte.tcl
 // RTL Simulation : 19 / 20 [n/a] @ "325000"
 // RTL Simulation : 20 / 20 [n/a] @ "335000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 375 ns : File "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_byte.autotb.v" Line 203
+$finish called at time : 375 ns : File "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/verilog/simple_lfsr_next_random_bits.autotb.v" Line 203
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon May 22 21:07:27 2017...
+INFO: [Common 17-206] Exiting xsim at Wed May 24 18:54:46 2017...

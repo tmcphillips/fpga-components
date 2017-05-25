@@ -83,7 +83,7 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.simple_lfsr_next_byte.autotvout_ap_return.dat"
+         "c.simple_lfsr_next_random_bits.autotvout_ap_return.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -108,7 +108,7 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.simple_lfsr_next_byte.autotvout_ap_return.dat"
+         "rtl.simple_lfsr_next_random_bits.autotvout_ap_return.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

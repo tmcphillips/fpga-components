@@ -3,14 +3,7 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog>
-        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;could not read &quot;C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/tv/rtldatafile/sim/report/cosim.log&quot;: no such file or directory&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="lfsr" solutionName="ultrazed" date="2017-05-22T21:01:42.891-0700"/>
-        <logs message="ERROR: [COSIM 212-344] Rtl simulation failed." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T21:01:42.753-0700"/>
-        <logs message="ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  " projectName="lfsr" solutionName="ultrazed" date="2017-05-22T21:01:42.705-0700"/>
-        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;could not read &quot;C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/tv/rtldatafile/sim/report/cosim.log&quot;: no such file or directory&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="lfsr" solutionName="ultrazed" date="2017-05-22T20:41:15.024-0700"/>
-        <logs message="ERROR: [COSIM 212-344] Rtl simulation failed." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T20:41:14.856-0700"/>
-        <logs message="ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  " projectName="lfsr" solutionName="ultrazed" date="2017-05-22T20:41:14.814-0700"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
       <packageLog/>
       <csimLog/>
@@ -19,8 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-22T21:05:57.885-0700" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-22T20:40:35.288-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T18:53:53.758-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-24T16:49:57.757-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

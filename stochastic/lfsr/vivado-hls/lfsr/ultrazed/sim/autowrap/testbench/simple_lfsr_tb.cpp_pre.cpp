@@ -16045,7 +16045,27 @@ namespace std
 
 namespace simple_lfsr {
 
- int next_byte();
+ template<unsigned int NBITS>
+ int next_random_bits() {
+
+  static int r = 0xc5705a19;
+
+  static unsigned int const mask = (1 << (NBITS)) - 1;
+
+  compute_random_bits: for (int i = 0; i < NBITS; ++i) {
+
+   bool bit31 = r & (1 << 31);
+   bool bit29 = r & (1 << 29);
+   bool bit25 = r & (1 << 25);
+   bool bit24 = r & (1 << 24);
+
+   int newbit = bit31 ^ bit29 ^ bit25 ^ bit24;
+
+   r = (r << 1) | newbit;
+  }
+
+  return r & mask;
+ }
 }
 # 6 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp" 2
 
@@ -16053,8 +16073,8 @@ using std::cout;
 using std::endl;
 using std::stringstream;
 
-int simple_lfsr_next_byte() {
- return simple_lfsr::next_byte();
+int simple_lfsr_next_random_bits() {
+ return simple_lfsr::next_random_bits<8>();
 }
 
 int main() {
@@ -16062,7 +16082,7 @@ int main() {
  stringstream ss;
 
  for (int i = 0; i < 20; ++i) {
-  ss << simple_lfsr_next_byte() << endl;
+  ss << simple_lfsr_next_random_bits() << endl;
  }
 
  cout << ss.str();

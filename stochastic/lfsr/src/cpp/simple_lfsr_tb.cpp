@@ -8,8 +8,8 @@ using std::cout;
 using std::endl;
 using std::stringstream;
 
-int simple_lfsr_next_byte() {
-	return simple_lfsr::next_byte();
+int simple_lfsr_next_random_bits() {
+	return simple_lfsr::next_random_bits<8>();
 }
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 	stringstream ss;
 
 	for (int i = 0; i < 20; ++i) {
-		ss << simple_lfsr_next_byte() << endl;
+		ss << simple_lfsr_next_random_bits() << endl;
 	}
 
 	cout << ss.str();

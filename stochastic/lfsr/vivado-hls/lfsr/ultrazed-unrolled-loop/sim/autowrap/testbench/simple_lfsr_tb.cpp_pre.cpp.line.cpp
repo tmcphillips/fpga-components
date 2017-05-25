@@ -16045,7 +16045,27 @@ namespace std
 #pragma empty_line
 namespace simple_lfsr {
 #pragma empty_line
- int next_byte();
+ template<unsigned int NBITS>
+ int next_random_bits() {
+#pragma empty_line
+  static int r = 0xc5705a19;
+#pragma empty_line
+  static unsigned int const mask = (1 << (NBITS)) - 1;
+#pragma empty_line
+  compute_random_bits: for (int i = 0; i < NBITS; ++i) {
+#pragma empty_line
+   bool bit31 = r & (1 << 31);
+   bool bit29 = r & (1 << 29);
+   bool bit25 = r & (1 << 25);
+   bool bit24 = r & (1 << 24);
+#pragma empty_line
+   int newbit = bit31 ^ bit29 ^ bit25 ^ bit24;
+#pragma empty_line
+   r = (r << 1) | newbit;
+  }
+#pragma empty_line
+  return r & mask;
+ }
 }
 #pragma line 6 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp" 2
 #pragma empty_line
@@ -16053,8 +16073,8 @@ using std::cout;
 using std::endl;
 using std::stringstream;
 #pragma empty_line
-int simple_lfsr_next_byte() {
- return simple_lfsr::next_byte();
+int simple_lfsr_next_random_bits() {
+ return simple_lfsr::next_random_bits<8>();
 }
 #pragma empty_line
 int main() {
@@ -16062,7 +16082,7 @@ int main() {
  stringstream ss;
 #pragma empty_line
  for (int i = 0; i < 20; ++i) {
-  ss << simple_lfsr_next_byte() << endl;
+  ss << simple_lfsr_next_random_bits() << endl;
  }
 #pragma empty_line
  cout << ss.str();

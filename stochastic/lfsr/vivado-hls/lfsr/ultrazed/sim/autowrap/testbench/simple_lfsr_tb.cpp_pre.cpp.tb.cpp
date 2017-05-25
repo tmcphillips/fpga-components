@@ -16052,7 +16052,27 @@ namespace std
 
 namespace simple_lfsr {
 
- int next_byte();
+ template<unsigned int NBITS>
+ int next_random_bits() {
+
+  static int r = 0xc5705a19;
+
+  static unsigned int const mask = (1 << (NBITS)) - 1;
+
+  compute_random_bits: for (int i = 0; i < NBITS; ++i) {
+
+   bool bit31 = r & (1 << 31);
+   bool bit29 = r & (1 << 29);
+   bool bit25 = r & (1 << 25);
+   bool bit24 = r & (1 << 24);
+
+   int newbit = bit31 ^ bit29 ^ bit25 ^ bit24;
+
+   r = (r << 1) | newbit;
+  }
+
+  return r & mask;
+ }
 }
 #6 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp" 2
 
@@ -16060,8 +16080,8 @@ using std::cout;
 using std::endl;
 using std::stringstream;
 
-int simple_lfsr_next_byte() {
- return simple_lfsr::next_byte();
+int simple_lfsr_next_random_bits() {
+ return simple_lfsr::next_random_bits<8>();
 }
 
 
@@ -16069,7 +16089,7 @@ int simple_lfsr_next_byte() {
 #15 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
 
 #ifndef HLS_FASTSIM
-#include "apatb_simple_lfsr_next_byte.h"
+#include "apatb_simple_lfsr_next_random_bits.h"
 #endif
 
 #15 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
@@ -16080,21 +16100,21 @@ int main() {
  for (int i = 0; i < 20; ++i) {
   ss << 
 #ifndef HLS_FASTSIM
-#define simple_lfsr_next_byte AESL_WRAP_simple_lfsr_next_byte
+#define simple_lfsr_next_random_bits AESL_WRAP_simple_lfsr_next_random_bits
 #endif
 
 #20 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
 
 #ifndef HLS_FASTSIM
-#define simple_lfsr_next_byte AESL_WRAP_simple_lfsr_next_byte
+#define simple_lfsr_next_random_bits AESL_WRAP_simple_lfsr_next_random_bits
 #endif
 
 #20 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
-simple_lfsr_next_byte
-#undef simple_lfsr_next_byte
+simple_lfsr_next_random_bits
+#undef simple_lfsr_next_random_bits
 #20 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
 
-#undef simple_lfsr_next_byte
+#undef simple_lfsr_next_random_bits
 #20 "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/src/cpp/simple_lfsr_tb.cpp"
 () << endl;
  }

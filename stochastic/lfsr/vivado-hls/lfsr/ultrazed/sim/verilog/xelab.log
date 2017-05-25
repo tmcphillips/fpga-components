@@ -1,17 +1,17 @@
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_simple_lfsr_next_byte_top -prj simple_lfsr_next_byte.prj --initfile C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s simple_lfsr_next_byte 
+Running: C:/Xilinx/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_simple_lfsr_next_random_bits_top -prj simple_lfsr_next_random_bits.prj --initfile C:/Xilinx/Vivado/2016.4/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s simple_lfsr_next_random_bits 
 Multi-threading is on. Using 2 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/simple_lfsr_next_byte.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_simple_lfsr_next_byte_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/simple_lfsr_next_byte.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module simple_lfsr_next_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/simple_lfsr_next_random_bits.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_simple_lfsr_next_random_bits_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed/sim/verilog/simple_lfsr_next_random_bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module simple_lfsr_next_random_bits
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.simple_lfsr_next_byte
-Compiling module xil_defaultlib.apatb_simple_lfsr_next_byte_top
-Built simulation snapshot simple_lfsr_next_byte
+Compiling module xil_defaultlib.simple_lfsr_next_random_bits
+Compiling module xil_defaultlib.apatb_simple_lfsr_next_random_bi...
+Built simulation snapshot simple_lfsr_next_random_bits

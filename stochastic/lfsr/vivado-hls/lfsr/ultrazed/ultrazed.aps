@@ -6,7 +6,7 @@
         <clock default="false" name="default" period="10"/>
     </clockList>
     <config>
-        <schedule model="simple_lfsr_next_byte"/>
+        <schedule model="simple_lfsr_next_random_bits"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

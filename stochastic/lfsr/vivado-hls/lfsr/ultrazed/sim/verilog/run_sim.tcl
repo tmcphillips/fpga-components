@@ -34,12 +34,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile simple_lfsr_next_byte.autotvin.dat]} {
-	file delete -force simple_lfsr_next_byte.autotvin.dat
+if {[file isfile simple_lfsr_next_random_bits.autotvin.dat]} {
+	file delete -force simple_lfsr_next_random_bits.autotvin.dat
 }
 
-if {[file isfile simple_lfsr_next_byte.autotvout.dat]} {
-	file delete -force simple_lfsr_next_byte.autotvout.dat
+if {[file isfile simple_lfsr_next_random_bits.autotvout.dat]} {
+	file delete -force simple_lfsr_next_random_bits.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

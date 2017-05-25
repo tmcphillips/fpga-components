@@ -1,9 +1,9 @@
 set status(tv_done) 0
-set status(tvin) "simple_lfsr_next_byte.autotvin.dat"
+set status(tvin) "simple_lfsr_next_random_bits.autotvin.dat"
 set status(wrapc_done) 1
 set status(bc_done) 0
 set status(bc_tb_done) 0
-set status(tvout) "simple_lfsr_next_byte.autotvout.dat"
+set status(tvout) "simple_lfsr_next_random_bits.autotvout.dat"
 set status(sc_done) 0
 set status(cas_done) 0
 set status(hdl_tvin) ""
