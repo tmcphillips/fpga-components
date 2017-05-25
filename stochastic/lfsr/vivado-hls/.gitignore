@@ -1,4 +1,10 @@
 db
 *.o
 *.exe
+*.log
+.apc
+csim
+sim
+.tcls
+.autopilot
 

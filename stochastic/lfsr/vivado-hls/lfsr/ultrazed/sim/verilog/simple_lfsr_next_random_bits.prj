@@ -1,3 +1,0 @@
-sv xil_defaultlib "simple_lfsr_next_random_bits.autotb.v"
-sv xil_defaultlib "simple_lfsr_next_random_bits.v"
-
