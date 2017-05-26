@@ -2,14 +2,19 @@
 
 namespace simple_lfsr {
 
-	template<unsigned int NBITS>
+	template<unsigned int N>
+	struct Mask {
+		unsigned int const value = (1 << N) - 1;
+	};
+
+	template<unsigned int N>
 	int next_random_bits() {
 
 		static int r = 0xc5705a19;
 
-		static unsigned int const mask = (1 << (NBITS)) - 1;
+		static Mask<N> mask;
 
-		compute_random_bits: for (int i = 0; i < NBITS; ++i) {
+		compute_random_bits: for (int i = 0; i < N; ++i) {
 
 			bool bit31 = r & (1 << 31);
 			bool bit29 = r & (1 << 29);
@@ -21,6 +26,6 @@ namespace simple_lfsr {
 			r = (r << 1) | newbit;
 		}
 
-		return r & mask;
+		return r & mask.value;
 	}
 }

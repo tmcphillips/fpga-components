@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\cpp\simple_lfsr.cpp" />
     <ClCompile Include="..\..\src\cpp\simple_lfsr_tb.cpp" />
   </ItemGroup>
   <ItemGroup>
