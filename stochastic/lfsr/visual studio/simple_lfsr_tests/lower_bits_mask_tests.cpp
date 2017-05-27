@@ -9,6 +9,12 @@ namespace simple_lfsr_tests
 	{
 	public:
 
+		TEST_METHOD(TestLowerBitsMask_0_Bits)
+		{
+			simple_lfsr::LowerBitsMask<0> mask;
+			Assert::AreEqual(0x00u, mask.value);
+		}
+
 		TEST_METHOD(TestLowerBitsMask_1_Bit)
 		{
 			simple_lfsr::LowerBitsMask<1> mask;
@@ -44,6 +50,5 @@ namespace simple_lfsr_tests
 			simple_lfsr::LowerBitsMask<32> mask;
 			Assert::AreEqual(0xffffffffu, mask.value);
 		}
-
 	};
 }
