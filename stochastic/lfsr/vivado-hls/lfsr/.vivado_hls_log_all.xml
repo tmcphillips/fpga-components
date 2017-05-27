@@ -6,28 +6,23 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T23:56:33.345-0700"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-25T00:01:05.924-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed" date="2017-05-25T00:01:04.124-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed" date="2017-05-25T00:00:59.090-0700" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T23:56:11.939-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T23:56:09.551-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T23:56:04.353-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:23.211-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:20.380-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:15.533-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:24.131-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:22.136-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:17.654-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed" date="2017-05-26T16:02:39.936-0700" type="Warning"/>
-        <logs message="WARNING: [SIM 211-51] HLS only supports CLANG compiler in Linux." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-24T23:56:32.445-0700" type="Warning"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

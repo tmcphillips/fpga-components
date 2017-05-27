@@ -50,15 +50,15 @@ wire   [3:0] i_fu_57_p2;
 wire   [0:0] ap_CS_fsm_state2;
 reg   [3:0] i_i_reg_36;
 wire   [0:0] tmp_i_fu_51_p2;
-wire   [31:0] tmp_8_i_fu_117_p3;
-wire   [0:0] tmp_3_fu_71_p3;
+wire   [31:0] tmp_9_i_fu_117_p3;
 wire   [0:0] tmp_2_fu_63_p3;
+wire   [0:0] tmp_3_fu_71_p3;
 wire   [0:0] tmp_4_fu_79_p3;
 wire   [0:0] tmp_5_fu_87_p3;
-wire   [0:0] p_lobit2_i2_fu_101_p2;
+wire   [0:0] tmp1_fu_101_p2;
 wire   [0:0] tmp_fu_95_p2;
 wire   [30:0] tmp_6_fu_113_p1;
-wire   [0:0] newbit_fu_107_p2;
+wire   [0:0] new_random_bit_i_fu_107_p2;
 wire   [7:0] tmp_1_fu_131_p1;
 reg   [1:0] ap_NS_fsm;
 
@@ -86,7 +86,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state2) & (tmp_i_fu_51_p2 == 1'b0))) begin
-        r <= tmp_8_i_fu_117_p3;
+        r <= tmp_9_i_fu_117_p3;
     end
 end
 
@@ -144,9 +144,9 @@ assign ap_return = tmp_1_fu_131_p1;
 
 assign i_fu_57_p2 = (i_i_reg_36 + ap_const_lv4_1);
 
-assign newbit_fu_107_p2 = (p_lobit2_i2_fu_101_p2 ^ tmp_fu_95_p2);
+assign new_random_bit_i_fu_107_p2 = (tmp1_fu_101_p2 ^ tmp_fu_95_p2);
 
-assign p_lobit2_i2_fu_101_p2 = (tmp_4_fu_79_p3 ^ tmp_5_fu_87_p3);
+assign tmp1_fu_101_p2 = (tmp_4_fu_79_p3 ^ tmp_5_fu_87_p3);
 
 assign tmp_1_fu_131_p1 = r[7:0];
 
@@ -160,9 +160,9 @@ assign tmp_5_fu_87_p3 = r[ap_const_lv32_18];
 
 assign tmp_6_fu_113_p1 = r[30:0];
 
-assign tmp_8_i_fu_117_p3 = {{tmp_6_fu_113_p1}, {newbit_fu_107_p2}};
+assign tmp_9_i_fu_117_p3 = {{tmp_6_fu_113_p1}, {new_random_bit_i_fu_107_p2}};
 
-assign tmp_fu_95_p2 = (tmp_3_fu_71_p3 ^ tmp_2_fu_63_p3);
+assign tmp_fu_95_p2 = (tmp_2_fu_63_p3 ^ tmp_3_fu_71_p3);
 
 assign tmp_i_fu_51_p2 = ((i_i_reg_36 == ap_const_lv4_8) ? 1'b1 : 1'b0);
 

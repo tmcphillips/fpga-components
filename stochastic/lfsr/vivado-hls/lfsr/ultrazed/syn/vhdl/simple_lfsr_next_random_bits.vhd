@@ -52,15 +52,15 @@ architecture behav of simple_lfsr_next_random_bits is
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal i_i_reg_36 : STD_LOGIC_VECTOR (3 downto 0);
     signal tmp_i_fu_51_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_8_i_fu_117_p3 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_3_fu_71_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_9_i_fu_117_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_2_fu_63_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_3_fu_71_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_4_fu_79_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_5_fu_87_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal p_lobit2_i2_fu_101_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp1_fu_101_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_fu_95_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_6_fu_113_p1 : STD_LOGIC_VECTOR (30 downto 0);
-    signal newbit_fu_107_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal new_random_bit_i_fu_107_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_1_fu_131_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
@@ -96,7 +96,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_lv1_1 = ap_CS_fsm_state2) and (tmp_i_fu_51_p2 = ap_const_lv1_0))) then
-                r <= tmp_8_i_fu_117_p3;
+                r <= tmp_9_i_fu_117_p3;
             end if;
         end if;
     end process;
@@ -154,15 +154,15 @@ begin
 
     ap_return <= std_logic_vector(resize(unsigned(tmp_1_fu_131_p1),32));
     i_fu_57_p2 <= std_logic_vector(unsigned(i_i_reg_36) + unsigned(ap_const_lv4_1));
-    newbit_fu_107_p2 <= (p_lobit2_i2_fu_101_p2 xor tmp_fu_95_p2);
-    p_lobit2_i2_fu_101_p2 <= (tmp_4_fu_79_p3 xor tmp_5_fu_87_p3);
+    new_random_bit_i_fu_107_p2 <= (tmp1_fu_101_p2 xor tmp_fu_95_p2);
+    tmp1_fu_101_p2 <= (tmp_4_fu_79_p3 xor tmp_5_fu_87_p3);
     tmp_1_fu_131_p1 <= r(8 - 1 downto 0);
     tmp_2_fu_63_p3 <= r(31 downto 31);
     tmp_3_fu_71_p3 <= r(29 downto 29);
     tmp_4_fu_79_p3 <= r(25 downto 25);
     tmp_5_fu_87_p3 <= r(24 downto 24);
     tmp_6_fu_113_p1 <= r(31 - 1 downto 0);
-    tmp_8_i_fu_117_p3 <= (tmp_6_fu_113_p1 & newbit_fu_107_p2);
-    tmp_fu_95_p2 <= (tmp_3_fu_71_p3 xor tmp_2_fu_63_p3);
+    tmp_9_i_fu_117_p3 <= (tmp_6_fu_113_p1 & new_random_bit_i_fu_107_p2);
+    tmp_fu_95_p2 <= (tmp_2_fu_63_p3 xor tmp_3_fu_71_p3);
     tmp_i_fu_51_p2 <= "1" when (i_i_reg_36 = ap_const_lv4_8) else "0";
 end behav;

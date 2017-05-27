@@ -60,11 +60,11 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     SC_METHOD(thread_i_fu_57_p2);
     sensitive << ( i_i_reg_36 );
 
-    SC_METHOD(thread_newbit_fu_107_p2);
-    sensitive << ( p_lobit2_i2_fu_101_p2 );
+    SC_METHOD(thread_new_random_bit_i_fu_107_p2);
+    sensitive << ( tmp1_fu_101_p2 );
     sensitive << ( tmp_fu_95_p2 );
 
-    SC_METHOD(thread_p_lobit2_i2_fu_101_p2);
+    SC_METHOD(thread_tmp1_fu_101_p2);
     sensitive << ( tmp_4_fu_79_p3 );
     sensitive << ( tmp_5_fu_87_p3 );
 
@@ -86,13 +86,13 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     SC_METHOD(thread_tmp_6_fu_113_p1);
     sensitive << ( r );
 
-    SC_METHOD(thread_tmp_8_i_fu_117_p3);
+    SC_METHOD(thread_tmp_9_i_fu_117_p3);
     sensitive << ( tmp_6_fu_113_p1 );
-    sensitive << ( newbit_fu_107_p2 );
+    sensitive << ( new_random_bit_i_fu_107_p2 );
 
     SC_METHOD(thread_tmp_fu_95_p2);
-    sensitive << ( tmp_3_fu_71_p3 );
     sensitive << ( tmp_2_fu_63_p3 );
+    sensitive << ( tmp_3_fu_71_p3 );
 
     SC_METHOD(thread_tmp_i_fu_51_p2);
     sensitive << ( ap_CS_fsm_state2 );
@@ -132,15 +132,15 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, i_i_reg_36, "i_i_reg_36");
     sc_trace(mVcdFile, tmp_i_fu_51_p2, "tmp_i_fu_51_p2");
-    sc_trace(mVcdFile, tmp_8_i_fu_117_p3, "tmp_8_i_fu_117_p3");
-    sc_trace(mVcdFile, tmp_3_fu_71_p3, "tmp_3_fu_71_p3");
+    sc_trace(mVcdFile, tmp_9_i_fu_117_p3, "tmp_9_i_fu_117_p3");
     sc_trace(mVcdFile, tmp_2_fu_63_p3, "tmp_2_fu_63_p3");
+    sc_trace(mVcdFile, tmp_3_fu_71_p3, "tmp_3_fu_71_p3");
     sc_trace(mVcdFile, tmp_4_fu_79_p3, "tmp_4_fu_79_p3");
     sc_trace(mVcdFile, tmp_5_fu_87_p3, "tmp_5_fu_87_p3");
-    sc_trace(mVcdFile, p_lobit2_i2_fu_101_p2, "p_lobit2_i2_fu_101_p2");
+    sc_trace(mVcdFile, tmp1_fu_101_p2, "tmp1_fu_101_p2");
     sc_trace(mVcdFile, tmp_fu_95_p2, "tmp_fu_95_p2");
     sc_trace(mVcdFile, tmp_6_fu_113_p1, "tmp_6_fu_113_p1");
-    sc_trace(mVcdFile, newbit_fu_107_p2, "newbit_fu_107_p2");
+    sc_trace(mVcdFile, new_random_bit_i_fu_107_p2, "new_random_bit_i_fu_107_p2");
     sc_trace(mVcdFile, tmp_1_fu_131_p1, "tmp_1_fu_131_p1");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -174,7 +174,7 @@ void simple_lfsr_next_random_bits::thread_ap_clk_no_reset_() {
         i_i_reg_36 = ap_const_lv4_0;
     }
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0))) {
-        r = tmp_8_i_fu_117_p3.read();
+        r = tmp_9_i_fu_117_p3.read();
     }
 }
 
@@ -221,12 +221,12 @@ void simple_lfsr_next_random_bits::thread_i_fu_57_p2() {
     i_fu_57_p2 = (!i_i_reg_36.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(i_i_reg_36.read()) + sc_biguint<4>(ap_const_lv4_1));
 }
 
-void simple_lfsr_next_random_bits::thread_newbit_fu_107_p2() {
-    newbit_fu_107_p2 = (p_lobit2_i2_fu_101_p2.read() ^ tmp_fu_95_p2.read());
+void simple_lfsr_next_random_bits::thread_new_random_bit_i_fu_107_p2() {
+    new_random_bit_i_fu_107_p2 = (tmp1_fu_101_p2.read() ^ tmp_fu_95_p2.read());
 }
 
-void simple_lfsr_next_random_bits::thread_p_lobit2_i2_fu_101_p2() {
-    p_lobit2_i2_fu_101_p2 = (tmp_4_fu_79_p3.read() ^ tmp_5_fu_87_p3.read());
+void simple_lfsr_next_random_bits::thread_tmp1_fu_101_p2() {
+    tmp1_fu_101_p2 = (tmp_4_fu_79_p3.read() ^ tmp_5_fu_87_p3.read());
 }
 
 void simple_lfsr_next_random_bits::thread_tmp_1_fu_131_p1() {
@@ -253,12 +253,12 @@ void simple_lfsr_next_random_bits::thread_tmp_6_fu_113_p1() {
     tmp_6_fu_113_p1 = r.read().range(31-1, 0);
 }
 
-void simple_lfsr_next_random_bits::thread_tmp_8_i_fu_117_p3() {
-    tmp_8_i_fu_117_p3 = esl_concat<31,1>(tmp_6_fu_113_p1.read(), newbit_fu_107_p2.read());
+void simple_lfsr_next_random_bits::thread_tmp_9_i_fu_117_p3() {
+    tmp_9_i_fu_117_p3 = esl_concat<31,1>(tmp_6_fu_113_p1.read(), new_random_bit_i_fu_107_p2.read());
 }
 
 void simple_lfsr_next_random_bits::thread_tmp_fu_95_p2() {
-    tmp_fu_95_p2 = (tmp_3_fu_71_p3.read() ^ tmp_2_fu_63_p3.read());
+    tmp_fu_95_p2 = (tmp_2_fu_63_p3.read() ^ tmp_3_fu_71_p3.read());
 }
 
 void simple_lfsr_next_random_bits::thread_tmp_i_fu_51_p2() {
