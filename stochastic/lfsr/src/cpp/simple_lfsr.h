@@ -3,7 +3,7 @@
 namespace simple_lfsr {
 
 	template<unsigned int N>
-	struct Mask {
+	struct LowerBitsMask {
 		unsigned int const value = (1 << N) - 1;
 	};
 
@@ -12,7 +12,7 @@ namespace simple_lfsr {
 
 		static int r = 0xc5705a19;
 
-		static Mask<N> mask;
+		static LowerBitsMask<N> mask;
 
 		compute_random_bits: for (int i = 0; i < N; ++i) {
 
