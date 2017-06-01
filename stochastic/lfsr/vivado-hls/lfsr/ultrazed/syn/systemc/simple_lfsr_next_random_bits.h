@@ -41,8 +41,8 @@ struct simple_lfsr_next_random_bits : public sc_module {
     sc_signal< sc_lv<4> > i_fu_57_p2;
     sc_signal< sc_lv<1> > ap_CS_fsm_state2;
     sc_signal< sc_lv<4> > i_i_reg_36;
-    sc_signal< sc_lv<1> > tmp_i_fu_51_p2;
-    sc_signal< sc_lv<32> > tmp_9_i_fu_117_p3;
+    sc_signal< sc_lv<1> > exitcond_i_fu_51_p2;
+    sc_signal< sc_lv<32> > tmp_8_i_fu_117_p3;
     sc_signal< sc_lv<1> > tmp_2_fu_63_p3;
     sc_signal< sc_lv<1> > tmp_3_fu_71_p3;
     sc_signal< sc_lv<1> > tmp_4_fu_79_p3;
@@ -76,6 +76,7 @@ struct simple_lfsr_next_random_bits : public sc_module {
     void thread_ap_idle();
     void thread_ap_ready();
     void thread_ap_return();
+    void thread_exitcond_i_fu_51_p2();
     void thread_i_fu_57_p2();
     void thread_new_random_bit_i_fu_107_p2();
     void thread_tmp1_fu_101_p2();
@@ -85,9 +86,8 @@ struct simple_lfsr_next_random_bits : public sc_module {
     void thread_tmp_4_fu_79_p3();
     void thread_tmp_5_fu_87_p3();
     void thread_tmp_6_fu_113_p1();
-    void thread_tmp_9_i_fu_117_p3();
+    void thread_tmp_8_i_fu_117_p3();
     void thread_tmp_fu_95_p2();
-    void thread_tmp_i_fu_51_p2();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();
 };

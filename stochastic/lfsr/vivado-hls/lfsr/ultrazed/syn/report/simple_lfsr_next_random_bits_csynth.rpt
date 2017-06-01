@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'simple_lfsr_next_random_bits'
 ================================================================
-* Date:           Sat May 27 00:19:24 2017
+* Date:           Wed May 31 20:13:55 2017
 
 * Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
 * Project:        lfsr
@@ -86,7 +86,7 @@
     |        Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------+----------+-------+---+----+------------+------------+
     |i_fu_57_p2                  |     +    |      0|  0|   4|           4|           1|
-    |tmp_i_fu_51_p2              |   icmp   |      0|  0|   2|           4|           5|
+    |exitcond_i_fu_51_p2         |   icmp   |      0|  0|   2|           4|           5|
     |new_random_bit_i_fu_107_p2  |    xor   |      0|  0|   1|           1|           1|
     |tmp1_fu_101_p2              |    xor   |      0|  0|   1|           1|           1|
     |tmp_fu_95_p2                |    xor   |      0|  0|   1|           1|           1|

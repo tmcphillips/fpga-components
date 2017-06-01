@@ -52,7 +52,7 @@ architecture behav of simple_lfsr_next_random_bits is
     signal ap_CS_fsm_state1 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal r : STD_LOGIC_VECTOR (31 downto 0) := "11000101011100000101101000011001";
-    signal tmp_9_7_i_fu_454_p10 : STD_LOGIC_VECTOR (31 downto 0);
+    signal tmp_8_7_i_fu_454_p10 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_1_fu_58_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_2_fu_66_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_fu_50_p3 : STD_LOGIC_VECTOR (0 downto 0);
@@ -110,7 +110,7 @@ architecture behav of simple_lfsr_next_random_bits is
     signal new_random_bit_5_i_fu_348_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal new_random_bit_6_i_fu_398_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal new_random_bit_7_i_fu_448_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_9_7_i_cast_fu_476_p9 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_8_7_i_cast_fu_476_p9 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
 
 
@@ -134,7 +134,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_CS_fsm_state1 = ap_const_lv1_1) and not((ap_start = ap_const_logic_0)))) then
-                r <= tmp_9_7_i_fu_454_p10;
+                r <= tmp_8_7_i_fu_454_p10;
             end if;
         end if;
     end process;
@@ -179,7 +179,7 @@ begin
         end if; 
     end process;
 
-    ap_return <= std_logic_vector(resize(unsigned(tmp_9_7_i_cast_fu_476_p9),32));
+    ap_return <= std_logic_vector(resize(unsigned(tmp_8_7_i_cast_fu_476_p9),32));
     new_random_bit_1_i_fu_148_p2 <= (tmp5_fu_142_p2 xor tmp4_fu_136_p2);
     new_random_bit_2_i_fu_198_p2 <= (tmp8_fu_192_p2 xor tmp7_fu_186_p2);
     new_random_bit_3_i_fu_248_p2 <= (tmp3_fu_242_p2 xor tmp9_fu_236_p2);
@@ -234,9 +234,9 @@ begin
     tmp_5_fu_104_p3 <= r(30 downto 30);
     tmp_6_fu_112_p3 <= r(28 downto 28);
     tmp_7_fu_120_p3 <= r(24 downto 24);
+    tmp_8_7_i_cast_fu_476_p9 <= (((((((new_random_bit_i_fu_94_p2 & new_random_bit_1_i_fu_148_p2) & new_random_bit_2_i_fu_198_p2) & new_random_bit_3_i_fu_248_p2) & new_random_bit_4_i_fu_298_p2) & new_random_bit_5_i_fu_348_p2) & new_random_bit_6_i_fu_398_p2) & new_random_bit_7_i_fu_448_p2);
+    tmp_8_7_i_fu_454_p10 <= ((((((((tmp_4_fu_100_p1 & new_random_bit_i_fu_94_p2) & new_random_bit_1_i_fu_148_p2) & new_random_bit_2_i_fu_198_p2) & new_random_bit_3_i_fu_248_p2) & new_random_bit_4_i_fu_298_p2) & new_random_bit_5_i_fu_348_p2) & new_random_bit_6_i_fu_398_p2) & new_random_bit_7_i_fu_448_p2);
     tmp_8_fu_128_p3 <= r(23 downto 23);
-    tmp_9_7_i_cast_fu_476_p9 <= (((((((new_random_bit_i_fu_94_p2 & new_random_bit_1_i_fu_148_p2) & new_random_bit_2_i_fu_198_p2) & new_random_bit_3_i_fu_248_p2) & new_random_bit_4_i_fu_298_p2) & new_random_bit_5_i_fu_348_p2) & new_random_bit_6_i_fu_398_p2) & new_random_bit_7_i_fu_448_p2);
-    tmp_9_7_i_fu_454_p10 <= ((((((((tmp_4_fu_100_p1 & new_random_bit_i_fu_94_p2) & new_random_bit_1_i_fu_148_p2) & new_random_bit_2_i_fu_198_p2) & new_random_bit_3_i_fu_248_p2) & new_random_bit_4_i_fu_298_p2) & new_random_bit_5_i_fu_348_p2) & new_random_bit_6_i_fu_398_p2) & new_random_bit_7_i_fu_448_p2);
     tmp_9_fu_154_p3 <= r(29 downto 29);
     tmp_fu_50_p3 <= r(31 downto 31);
 end behav;

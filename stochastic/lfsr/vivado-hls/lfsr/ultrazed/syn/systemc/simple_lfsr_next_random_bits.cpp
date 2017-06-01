@@ -42,7 +42,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
 
     SC_METHOD(thread_ap_done);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_i_fu_51_p2 );
+    sensitive << ( exitcond_i_fu_51_p2 );
 
     SC_METHOD(thread_ap_idle);
     sensitive << ( ap_start );
@@ -50,12 +50,16 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
 
     SC_METHOD(thread_ap_ready);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_i_fu_51_p2 );
+    sensitive << ( exitcond_i_fu_51_p2 );
 
     SC_METHOD(thread_ap_return);
     sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( tmp_i_fu_51_p2 );
+    sensitive << ( exitcond_i_fu_51_p2 );
     sensitive << ( tmp_1_fu_131_p1 );
+
+    SC_METHOD(thread_exitcond_i_fu_51_p2);
+    sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( i_i_reg_36 );
 
     SC_METHOD(thread_i_fu_57_p2);
     sensitive << ( i_i_reg_36 );
@@ -86,7 +90,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     SC_METHOD(thread_tmp_6_fu_113_p1);
     sensitive << ( r );
 
-    SC_METHOD(thread_tmp_9_i_fu_117_p3);
+    SC_METHOD(thread_tmp_8_i_fu_117_p3);
     sensitive << ( tmp_6_fu_113_p1 );
     sensitive << ( new_random_bit_i_fu_107_p2 );
 
@@ -94,14 +98,10 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sensitive << ( tmp_2_fu_63_p3 );
     sensitive << ( tmp_3_fu_71_p3 );
 
-    SC_METHOD(thread_tmp_i_fu_51_p2);
-    sensitive << ( ap_CS_fsm_state2 );
-    sensitive << ( i_i_reg_36 );
-
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm );
-    sensitive << ( tmp_i_fu_51_p2 );
+    sensitive << ( exitcond_i_fu_51_p2 );
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
@@ -131,8 +131,8 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sc_trace(mVcdFile, i_fu_57_p2, "i_fu_57_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, i_i_reg_36, "i_i_reg_36");
-    sc_trace(mVcdFile, tmp_i_fu_51_p2, "tmp_i_fu_51_p2");
-    sc_trace(mVcdFile, tmp_9_i_fu_117_p3, "tmp_9_i_fu_117_p3");
+    sc_trace(mVcdFile, exitcond_i_fu_51_p2, "exitcond_i_fu_51_p2");
+    sc_trace(mVcdFile, tmp_8_i_fu_117_p3, "tmp_8_i_fu_117_p3");
     sc_trace(mVcdFile, tmp_2_fu_63_p3, "tmp_2_fu_63_p3");
     sc_trace(mVcdFile, tmp_3_fu_71_p3, "tmp_3_fu_71_p3");
     sc_trace(mVcdFile, tmp_4_fu_79_p3, "tmp_4_fu_79_p3");
@@ -167,14 +167,14 @@ void simple_lfsr_next_random_bits::thread_ap_clk_no_reset_() {
         ap_CS_fsm = ap_NS_fsm.read();
     }
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && 
-         esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0))) {
+         esl_seteq<1,1,1>(exitcond_i_fu_51_p2.read(), ap_const_lv1_0))) {
         i_i_reg_36 = i_fu_57_p2.read();
     } else if ((esl_seteq<1,1,1>(ap_CS_fsm_state1.read(), ap_const_lv1_1) && 
                 !esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0))) {
         i_i_reg_36 = ap_const_lv4_0;
     }
-    if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0))) {
-        r = tmp_9_i_fu_117_p3.read();
+    if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(exitcond_i_fu_51_p2.read(), ap_const_lv1_0))) {
+        r = tmp_8_i_fu_117_p3.read();
     }
 }
 
@@ -188,7 +188,7 @@ void simple_lfsr_next_random_bits::thread_ap_CS_fsm_state2() {
 
 void simple_lfsr_next_random_bits::thread_ap_done() {
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && 
-         !esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0))) {
+         !esl_seteq<1,1,1>(exitcond_i_fu_51_p2.read(), ap_const_lv1_0))) {
         ap_done = ap_const_logic_1;
     } else {
         ap_done = ap_const_logic_0;
@@ -206,7 +206,7 @@ void simple_lfsr_next_random_bits::thread_ap_idle() {
 
 void simple_lfsr_next_random_bits::thread_ap_ready() {
     if ((esl_seteq<1,1,1>(ap_const_lv1_1, ap_CS_fsm_state2.read()) && 
-         !esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0))) {
+         !esl_seteq<1,1,1>(exitcond_i_fu_51_p2.read(), ap_const_lv1_0))) {
         ap_ready = ap_const_logic_1;
     } else {
         ap_ready = ap_const_logic_0;
@@ -215,6 +215,10 @@ void simple_lfsr_next_random_bits::thread_ap_ready() {
 
 void simple_lfsr_next_random_bits::thread_ap_return() {
     ap_return = esl_zext<32,8>(tmp_1_fu_131_p1.read());
+}
+
+void simple_lfsr_next_random_bits::thread_exitcond_i_fu_51_p2() {
+    exitcond_i_fu_51_p2 = (!i_i_reg_36.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(i_i_reg_36.read() == ap_const_lv4_8);
 }
 
 void simple_lfsr_next_random_bits::thread_i_fu_57_p2() {
@@ -253,16 +257,12 @@ void simple_lfsr_next_random_bits::thread_tmp_6_fu_113_p1() {
     tmp_6_fu_113_p1 = r.read().range(31-1, 0);
 }
 
-void simple_lfsr_next_random_bits::thread_tmp_9_i_fu_117_p3() {
-    tmp_9_i_fu_117_p3 = esl_concat<31,1>(tmp_6_fu_113_p1.read(), new_random_bit_i_fu_107_p2.read());
+void simple_lfsr_next_random_bits::thread_tmp_8_i_fu_117_p3() {
+    tmp_8_i_fu_117_p3 = esl_concat<31,1>(tmp_6_fu_113_p1.read(), new_random_bit_i_fu_107_p2.read());
 }
 
 void simple_lfsr_next_random_bits::thread_tmp_fu_95_p2() {
     tmp_fu_95_p2 = (tmp_2_fu_63_p3.read() ^ tmp_3_fu_71_p3.read());
-}
-
-void simple_lfsr_next_random_bits::thread_tmp_i_fu_51_p2() {
-    tmp_i_fu_51_p2 = (!i_i_reg_36.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(i_i_reg_36.read() == ap_const_lv4_8);
 }
 
 void simple_lfsr_next_random_bits::thread_ap_NS_fsm() {
@@ -275,7 +275,7 @@ void simple_lfsr_next_random_bits::thread_ap_NS_fsm() {
             }
             break;
         case 2 : 
-            if (!esl_seteq<1,1,1>(tmp_i_fu_51_p2.read(), ap_const_lv1_0)) {
+            if (!esl_seteq<1,1,1>(exitcond_i_fu_51_p2.read(), ap_const_lv1_0)) {
                 ap_NS_fsm = ap_ST_fsm_state1;
             } else {
                 ap_NS_fsm = ap_ST_fsm_state2;

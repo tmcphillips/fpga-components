@@ -51,8 +51,8 @@ architecture behav of simple_lfsr_next_random_bits is
     signal ap_CS_fsm_state2 : STD_LOGIC_VECTOR (0 downto 0);
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal i_i_reg_36 : STD_LOGIC_VECTOR (3 downto 0);
-    signal tmp_i_fu_51_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_9_i_fu_117_p3 : STD_LOGIC_VECTOR (31 downto 0);
+    signal exitcond_i_fu_51_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_8_i_fu_117_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_2_fu_63_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_3_fu_71_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_4_fu_79_p3 : STD_LOGIC_VECTOR (0 downto 0);
@@ -85,7 +85,7 @@ begin
     i_i_reg_36_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_lv1_1 = ap_CS_fsm_state2) and (tmp_i_fu_51_p2 = ap_const_lv1_0))) then 
+            if (((ap_const_lv1_1 = ap_CS_fsm_state2) and (exitcond_i_fu_51_p2 = ap_const_lv1_0))) then 
                 i_i_reg_36 <= i_fu_57_p2;
             elsif (((ap_CS_fsm_state1 = ap_const_lv1_1) and not((ap_start = ap_const_logic_0)))) then 
                 i_i_reg_36 <= ap_const_lv4_0;
@@ -95,13 +95,13 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_lv1_1 = ap_CS_fsm_state2) and (tmp_i_fu_51_p2 = ap_const_lv1_0))) then
-                r <= tmp_9_i_fu_117_p3;
+            if (((ap_const_lv1_1 = ap_CS_fsm_state2) and (exitcond_i_fu_51_p2 = ap_const_lv1_0))) then
+                r <= tmp_8_i_fu_117_p3;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, tmp_i_fu_51_p2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, exitcond_i_fu_51_p2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -111,7 +111,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (not((tmp_i_fu_51_p2 = ap_const_lv1_0))) then
+                if (not((exitcond_i_fu_51_p2 = ap_const_lv1_0))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -123,9 +123,9 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0 downto 0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1 downto 1);
 
-    ap_done_assign_proc : process(ap_CS_fsm_state2, tmp_i_fu_51_p2)
+    ap_done_assign_proc : process(ap_CS_fsm_state2, exitcond_i_fu_51_p2)
     begin
-        if (((ap_const_lv1_1 = ap_CS_fsm_state2) and not((tmp_i_fu_51_p2 = ap_const_lv1_0)))) then 
+        if (((ap_const_lv1_1 = ap_CS_fsm_state2) and not((exitcond_i_fu_51_p2 = ap_const_lv1_0)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -143,9 +143,9 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_CS_fsm_state2, tmp_i_fu_51_p2)
+    ap_ready_assign_proc : process(ap_CS_fsm_state2, exitcond_i_fu_51_p2)
     begin
-        if (((ap_const_lv1_1 = ap_CS_fsm_state2) and not((tmp_i_fu_51_p2 = ap_const_lv1_0)))) then 
+        if (((ap_const_lv1_1 = ap_CS_fsm_state2) and not((exitcond_i_fu_51_p2 = ap_const_lv1_0)))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -153,6 +153,7 @@ begin
     end process;
 
     ap_return <= std_logic_vector(resize(unsigned(tmp_1_fu_131_p1),32));
+    exitcond_i_fu_51_p2 <= "1" when (i_i_reg_36 = ap_const_lv4_8) else "0";
     i_fu_57_p2 <= std_logic_vector(unsigned(i_i_reg_36) + unsigned(ap_const_lv4_1));
     new_random_bit_i_fu_107_p2 <= (tmp1_fu_101_p2 xor tmp_fu_95_p2);
     tmp1_fu_101_p2 <= (tmp_4_fu_79_p3 xor tmp_5_fu_87_p3);
@@ -162,7 +163,6 @@ begin
     tmp_4_fu_79_p3 <= r(25 downto 25);
     tmp_5_fu_87_p3 <= r(24 downto 24);
     tmp_6_fu_113_p1 <= r(31 - 1 downto 0);
-    tmp_9_i_fu_117_p3 <= (tmp_6_fu_113_p1 & new_random_bit_i_fu_107_p2);
+    tmp_8_i_fu_117_p3 <= (tmp_6_fu_113_p1 & new_random_bit_i_fu_107_p2);
     tmp_fu_95_p2 <= (tmp_2_fu_63_p3 xor tmp_3_fu_71_p3);
-    tmp_i_fu_51_p2 <= "1" when (i_i_reg_36 = ap_const_lv4_8) else "0";
 end behav;

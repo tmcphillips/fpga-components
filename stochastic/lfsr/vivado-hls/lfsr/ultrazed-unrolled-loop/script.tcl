@@ -5,8 +5,8 @@
 ############################################################
 open_project lfsr
 set_top simple_lfsr_next_random_bits
-add_files ../src/cpp/simple_lfsr.h
 add_files ../src/cpp/simple_lfsr_tb.cpp
+add_files ../src/cpp/simple_lfsr.h
 add_files -tb ../src/cpp/simple_lfsr_tb.cpp -cflags "-fpermissive"
 open_solution "ultrazed-unrolled-loop"
 set_part {xczu3eg-sfva625-1-i-es1} -tool vivado

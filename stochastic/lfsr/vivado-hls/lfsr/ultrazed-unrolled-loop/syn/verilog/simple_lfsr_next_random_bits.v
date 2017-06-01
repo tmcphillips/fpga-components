@@ -52,7 +52,7 @@ reg ap_ready;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire   [0:0] ap_CS_fsm_state1;
 reg   [31:0] r;
-wire   [31:0] tmp_9_7_i_fu_454_p10;
+wire   [31:0] tmp_8_7_i_fu_454_p10;
 wire   [0:0] tmp_1_fu_58_p3;
 wire   [0:0] tmp_2_fu_66_p3;
 wire   [0:0] tmp_fu_50_p3;
@@ -110,7 +110,7 @@ wire   [0:0] new_random_bit_4_i_fu_298_p2;
 wire   [0:0] new_random_bit_5_i_fu_348_p2;
 wire   [0:0] new_random_bit_6_i_fu_398_p2;
 wire   [0:0] new_random_bit_7_i_fu_448_p2;
-wire   [7:0] tmp_9_7_i_cast_fu_476_p9;
+wire   [7:0] tmp_8_7_i_cast_fu_476_p9;
 reg   [0:0] ap_NS_fsm;
 
 // power-on initialization
@@ -129,7 +129,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
-        r <= tmp_9_7_i_fu_454_p10;
+        r <= tmp_8_7_i_fu_454_p10;
     end
 end
 
@@ -170,7 +170,7 @@ end
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 
-assign ap_return = tmp_9_7_i_cast_fu_476_p9;
+assign ap_return = tmp_8_7_i_cast_fu_476_p9;
 
 assign new_random_bit_1_i_fu_148_p2 = (tmp5_fu_142_p2 ^ tmp4_fu_136_p2);
 
@@ -280,11 +280,11 @@ assign tmp_6_fu_112_p3 = r[ap_const_lv32_1C];
 
 assign tmp_7_fu_120_p3 = r[ap_const_lv32_18];
 
+assign tmp_8_7_i_cast_fu_476_p9 = {{{{{{{{new_random_bit_i_fu_94_p2}, {new_random_bit_1_i_fu_148_p2}}, {new_random_bit_2_i_fu_198_p2}}, {new_random_bit_3_i_fu_248_p2}}, {new_random_bit_4_i_fu_298_p2}}, {new_random_bit_5_i_fu_348_p2}}, {new_random_bit_6_i_fu_398_p2}}, {new_random_bit_7_i_fu_448_p2}};
+
+assign tmp_8_7_i_fu_454_p10 = {{{{{{{{{tmp_4_fu_100_p1}, {new_random_bit_i_fu_94_p2}}, {new_random_bit_1_i_fu_148_p2}}, {new_random_bit_2_i_fu_198_p2}}, {new_random_bit_3_i_fu_248_p2}}, {new_random_bit_4_i_fu_298_p2}}, {new_random_bit_5_i_fu_348_p2}}, {new_random_bit_6_i_fu_398_p2}}, {new_random_bit_7_i_fu_448_p2}};
+
 assign tmp_8_fu_128_p3 = r[ap_const_lv32_17];
-
-assign tmp_9_7_i_cast_fu_476_p9 = {{{{{{{{new_random_bit_i_fu_94_p2}, {new_random_bit_1_i_fu_148_p2}}, {new_random_bit_2_i_fu_198_p2}}, {new_random_bit_3_i_fu_248_p2}}, {new_random_bit_4_i_fu_298_p2}}, {new_random_bit_5_i_fu_348_p2}}, {new_random_bit_6_i_fu_398_p2}}, {new_random_bit_7_i_fu_448_p2}};
-
-assign tmp_9_7_i_fu_454_p10 = {{{{{{{{{tmp_4_fu_100_p1}, {new_random_bit_i_fu_94_p2}}, {new_random_bit_1_i_fu_148_p2}}, {new_random_bit_2_i_fu_198_p2}}, {new_random_bit_3_i_fu_248_p2}}, {new_random_bit_4_i_fu_298_p2}}, {new_random_bit_5_i_fu_348_p2}}, {new_random_bit_6_i_fu_398_p2}}, {new_random_bit_7_i_fu_448_p2}};
 
 assign tmp_9_fu_154_p3 = r[ap_const_lv32_1D];
 

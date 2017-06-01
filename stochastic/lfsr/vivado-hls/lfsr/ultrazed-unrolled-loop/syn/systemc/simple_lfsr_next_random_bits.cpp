@@ -57,7 +57,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     SC_METHOD(thread_ap_return);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( tmp_9_7_i_cast_fu_476_p9 );
+    sensitive << ( tmp_8_7_i_cast_fu_476_p9 );
 
     SC_METHOD(thread_new_random_bit_1_i_fu_148_p2);
     sensitive << ( tmp5_fu_142_p2 );
@@ -245,10 +245,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     SC_METHOD(thread_tmp_7_fu_120_p3);
     sensitive << ( r );
 
-    SC_METHOD(thread_tmp_8_fu_128_p3);
-    sensitive << ( r );
-
-    SC_METHOD(thread_tmp_9_7_i_cast_fu_476_p9);
+    SC_METHOD(thread_tmp_8_7_i_cast_fu_476_p9);
     sensitive << ( new_random_bit_i_fu_94_p2 );
     sensitive << ( new_random_bit_1_i_fu_148_p2 );
     sensitive << ( new_random_bit_2_i_fu_198_p2 );
@@ -258,7 +255,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sensitive << ( new_random_bit_6_i_fu_398_p2 );
     sensitive << ( new_random_bit_7_i_fu_448_p2 );
 
-    SC_METHOD(thread_tmp_9_7_i_fu_454_p10);
+    SC_METHOD(thread_tmp_8_7_i_fu_454_p10);
     sensitive << ( tmp_4_fu_100_p1 );
     sensitive << ( new_random_bit_i_fu_94_p2 );
     sensitive << ( new_random_bit_1_i_fu_148_p2 );
@@ -268,6 +265,9 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sensitive << ( new_random_bit_5_i_fu_348_p2 );
     sensitive << ( new_random_bit_6_i_fu_398_p2 );
     sensitive << ( new_random_bit_7_i_fu_448_p2 );
+
+    SC_METHOD(thread_tmp_8_fu_128_p3);
+    sensitive << ( r );
 
     SC_METHOD(thread_tmp_9_fu_154_p3);
     sensitive << ( r );
@@ -304,7 +304,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
     sc_trace(mVcdFile, r, "r");
-    sc_trace(mVcdFile, tmp_9_7_i_fu_454_p10, "tmp_9_7_i_fu_454_p10");
+    sc_trace(mVcdFile, tmp_8_7_i_fu_454_p10, "tmp_8_7_i_fu_454_p10");
     sc_trace(mVcdFile, tmp_1_fu_58_p3, "tmp_1_fu_58_p3");
     sc_trace(mVcdFile, tmp_2_fu_66_p3, "tmp_2_fu_66_p3");
     sc_trace(mVcdFile, tmp_fu_50_p3, "tmp_fu_50_p3");
@@ -362,7 +362,7 @@ simple_lfsr_next_random_bits::simple_lfsr_next_random_bits(sc_module_name name) 
     sc_trace(mVcdFile, new_random_bit_5_i_fu_348_p2, "new_random_bit_5_i_fu_348_p2");
     sc_trace(mVcdFile, new_random_bit_6_i_fu_398_p2, "new_random_bit_6_i_fu_398_p2");
     sc_trace(mVcdFile, new_random_bit_7_i_fu_448_p2, "new_random_bit_7_i_fu_448_p2");
-    sc_trace(mVcdFile, tmp_9_7_i_cast_fu_476_p9, "tmp_9_7_i_cast_fu_476_p9");
+    sc_trace(mVcdFile, tmp_8_7_i_cast_fu_476_p9, "tmp_8_7_i_cast_fu_476_p9");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -388,7 +388,7 @@ void simple_lfsr_next_random_bits::thread_ap_clk_no_reset_() {
         ap_CS_fsm = ap_NS_fsm.read();
     }
     if ((esl_seteq<1,1,1>(ap_CS_fsm_state1.read(), ap_const_lv1_1) && !esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0))) {
-        r = tmp_9_7_i_fu_454_p10.read();
+        r = tmp_8_7_i_fu_454_p10.read();
     }
 }
 
@@ -424,7 +424,7 @@ void simple_lfsr_next_random_bits::thread_ap_ready() {
 }
 
 void simple_lfsr_next_random_bits::thread_ap_return() {
-    ap_return = esl_zext<32,8>(tmp_9_7_i_cast_fu_476_p9.read());
+    ap_return = esl_zext<32,8>(tmp_8_7_i_cast_fu_476_p9.read());
 }
 
 void simple_lfsr_next_random_bits::thread_new_random_bit_1_i_fu_148_p2() {
@@ -643,16 +643,16 @@ void simple_lfsr_next_random_bits::thread_tmp_7_fu_120_p3() {
     tmp_7_fu_120_p3 = r.read().range(24, 24);
 }
 
+void simple_lfsr_next_random_bits::thread_tmp_8_7_i_cast_fu_476_p9() {
+    tmp_8_7_i_cast_fu_476_p9 = esl_concat<7,1>(esl_concat<6,1>(esl_concat<5,1>(esl_concat<4,1>(esl_concat<3,1>(esl_concat<2,1>(esl_concat<1,1>(new_random_bit_i_fu_94_p2.read(), new_random_bit_1_i_fu_148_p2.read()), new_random_bit_2_i_fu_198_p2.read()), new_random_bit_3_i_fu_248_p2.read()), new_random_bit_4_i_fu_298_p2.read()), new_random_bit_5_i_fu_348_p2.read()), new_random_bit_6_i_fu_398_p2.read()), new_random_bit_7_i_fu_448_p2.read());
+}
+
+void simple_lfsr_next_random_bits::thread_tmp_8_7_i_fu_454_p10() {
+    tmp_8_7_i_fu_454_p10 = esl_concat<31,1>(esl_concat<30,1>(esl_concat<29,1>(esl_concat<28,1>(esl_concat<27,1>(esl_concat<26,1>(esl_concat<25,1>(esl_concat<24,1>(tmp_4_fu_100_p1.read(), new_random_bit_i_fu_94_p2.read()), new_random_bit_1_i_fu_148_p2.read()), new_random_bit_2_i_fu_198_p2.read()), new_random_bit_3_i_fu_248_p2.read()), new_random_bit_4_i_fu_298_p2.read()), new_random_bit_5_i_fu_348_p2.read()), new_random_bit_6_i_fu_398_p2.read()), new_random_bit_7_i_fu_448_p2.read());
+}
+
 void simple_lfsr_next_random_bits::thread_tmp_8_fu_128_p3() {
     tmp_8_fu_128_p3 = r.read().range(23, 23);
-}
-
-void simple_lfsr_next_random_bits::thread_tmp_9_7_i_cast_fu_476_p9() {
-    tmp_9_7_i_cast_fu_476_p9 = esl_concat<7,1>(esl_concat<6,1>(esl_concat<5,1>(esl_concat<4,1>(esl_concat<3,1>(esl_concat<2,1>(esl_concat<1,1>(new_random_bit_i_fu_94_p2.read(), new_random_bit_1_i_fu_148_p2.read()), new_random_bit_2_i_fu_198_p2.read()), new_random_bit_3_i_fu_248_p2.read()), new_random_bit_4_i_fu_298_p2.read()), new_random_bit_5_i_fu_348_p2.read()), new_random_bit_6_i_fu_398_p2.read()), new_random_bit_7_i_fu_448_p2.read());
-}
-
-void simple_lfsr_next_random_bits::thread_tmp_9_7_i_fu_454_p10() {
-    tmp_9_7_i_fu_454_p10 = esl_concat<31,1>(esl_concat<30,1>(esl_concat<29,1>(esl_concat<28,1>(esl_concat<27,1>(esl_concat<26,1>(esl_concat<25,1>(esl_concat<24,1>(tmp_4_fu_100_p1.read(), new_random_bit_i_fu_94_p2.read()), new_random_bit_1_i_fu_148_p2.read()), new_random_bit_2_i_fu_198_p2.read()), new_random_bit_3_i_fu_248_p2.read()), new_random_bit_4_i_fu_298_p2.read()), new_random_bit_5_i_fu_348_p2.read()), new_random_bit_6_i_fu_398_p2.read()), new_random_bit_7_i_fu_448_p2.read());
 }
 
 void simple_lfsr_next_random_bits::thread_tmp_9_fu_154_p3() {

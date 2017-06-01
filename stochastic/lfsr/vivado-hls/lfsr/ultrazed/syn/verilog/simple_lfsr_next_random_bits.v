@@ -49,8 +49,8 @@ reg   [31:0] r;
 wire   [3:0] i_fu_57_p2;
 wire   [0:0] ap_CS_fsm_state2;
 reg   [3:0] i_i_reg_36;
-wire   [0:0] tmp_i_fu_51_p2;
-wire   [31:0] tmp_9_i_fu_117_p3;
+wire   [0:0] exitcond_i_fu_51_p2;
+wire   [31:0] tmp_8_i_fu_117_p3;
 wire   [0:0] tmp_2_fu_63_p3;
 wire   [0:0] tmp_3_fu_71_p3;
 wire   [0:0] tmp_4_fu_79_p3;
@@ -77,7 +77,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (tmp_i_fu_51_p2 == 1'b0))) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond_i_fu_51_p2 == 1'b0))) begin
         i_i_reg_36 <= i_fu_57_p2;
     end else if (((ap_CS_fsm_state1 == 1'b1) & ~(ap_start == 1'b0))) begin
         i_i_reg_36 <= ap_const_lv4_0;
@@ -85,13 +85,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state2) & (tmp_i_fu_51_p2 == 1'b0))) begin
-        r <= tmp_9_i_fu_117_p3;
+    if (((1'b1 == ap_CS_fsm_state2) & (exitcond_i_fu_51_p2 == 1'b0))) begin
+        r <= tmp_8_i_fu_117_p3;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & ~(tmp_i_fu_51_p2 == 1'b0))) begin
+    if (((1'b1 == ap_CS_fsm_state2) & ~(exitcond_i_fu_51_p2 == 1'b0))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -107,7 +107,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state2) & ~(tmp_i_fu_51_p2 == 1'b0))) begin
+    if (((1'b1 == ap_CS_fsm_state2) & ~(exitcond_i_fu_51_p2 == 1'b0))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -124,7 +124,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (~(tmp_i_fu_51_p2 == 1'b0)) begin
+            if (~(exitcond_i_fu_51_p2 == 1'b0)) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -141,6 +141,8 @@ assign ap_CS_fsm_state1 = ap_CS_fsm[ap_const_lv32_0];
 assign ap_CS_fsm_state2 = ap_CS_fsm[ap_const_lv32_1];
 
 assign ap_return = tmp_1_fu_131_p1;
+
+assign exitcond_i_fu_51_p2 = ((i_i_reg_36 == ap_const_lv4_8) ? 1'b1 : 1'b0);
 
 assign i_fu_57_p2 = (i_i_reg_36 + ap_const_lv4_1);
 
@@ -160,10 +162,8 @@ assign tmp_5_fu_87_p3 = r[ap_const_lv32_18];
 
 assign tmp_6_fu_113_p1 = r[30:0];
 
-assign tmp_9_i_fu_117_p3 = {{tmp_6_fu_113_p1}, {new_random_bit_i_fu_107_p2}};
+assign tmp_8_i_fu_117_p3 = {{tmp_6_fu_113_p1}, {new_random_bit_i_fu_107_p2}};
 
 assign tmp_fu_95_p2 = (tmp_2_fu_63_p3 ^ tmp_3_fu_71_p3);
-
-assign tmp_i_fu_51_p2 = ((i_i_reg_36 == ap_const_lv4_8) ? 1'b1 : 1'b0);
 
 endmodule //simple_lfsr_next_random_bits
