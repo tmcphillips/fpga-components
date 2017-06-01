@@ -1,25 +1,27 @@
 #pragma once
 
+#include "simple_lfsr_types.h"
+
 namespace simple_lfsr {
 
-	template<unsigned int N>
+	template<int TRUE_BIT_COUNT>
 	struct LowerBitsMask {
-		unsigned int const value = (1 << N) - 1;
+		lfsr_t const value = (1 << TRUE_BIT_COUNT) - 1;
 	};
 
-	template<unsigned int B>
-	bool bit(unsigned int n) {
-		return n & (1 << B);
+	template<int BIT_INDEX>
+	bool bit(lfsr_t n) {
+		return n & (1 << BIT_INDEX);
 	};
 
-	template<unsigned int N>
+	template<int RANDOM_BIT_COUNT>
 	int next_random_bits() {
 		
-		static unsigned int r = 0xc5705a19;
-		static LowerBitsMask<N> mask;
+		static lfsr_t r = LFSR_INIT_VALUE;
+		static LowerBitsMask<RANDOM_BIT_COUNT> mask;
 		
-		compute_random_bits: for (int i = 0; i < N; ++i) {
-			int new_random_bit = bit<31>(r) ^ bit<29>(r) ^ bit<25>(r) ^ bit<24>(r);
+		compute_random_bits: for (int i = 0; i < RANDOM_BIT_COUNT; ++i) {
+			lfsr_t new_random_bit = bit<31>(r) ^ bit<29>(r) ^ bit<25>(r) ^ bit<24>(r);
 			r = (r << 1) | new_random_bit;
 		}
 

@@ -18,5 +18,8 @@
     <ClInclude Include="..\..\src\cpp\simple_lfsr.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cpp\simple_lfsr_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

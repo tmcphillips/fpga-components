@@ -7,6 +7,7 @@ namespace simple_lfsr_tests
 {		
 	TEST_CLASS(LowerBitsMask_Tests)
 	{
+
 	public:
 
 		TEST_METHOD(TestLowerBitsMask_0_Bits)

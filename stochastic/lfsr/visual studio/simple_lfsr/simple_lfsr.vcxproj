@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\cpp\simple_lfsr.h" />
+    <ClInclude Include="..\..\src\cpp\simple_lfsr_types.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
