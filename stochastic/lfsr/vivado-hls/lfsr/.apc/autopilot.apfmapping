@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="simple_lfsr_tb.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr_tb.cpp"/>
     <originFiles name="simple_lfsr.h" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr.h"/>
+    <originFiles name="simple_lfsr_tb.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr_tb.cpp"/>
   </source>
   <testbench>
     <originFiles name="simple_lfsr_tb.cpp" path="C:\Users\tmcphill\GitRepos\fpga-components\stochastic\lfsr\src\cpp\simple_lfsr_tb.cpp"/>

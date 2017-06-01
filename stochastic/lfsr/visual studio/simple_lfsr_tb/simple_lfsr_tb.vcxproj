@@ -23,7 +23,7 @@
     <ProjectGuid>{EBB1E4E5-B3D0-4F66-92F2-212E5E17F150}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>simple_lfsr_tb</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

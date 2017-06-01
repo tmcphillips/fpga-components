@@ -3,7 +3,11 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
+      <simLog>
+        <logs message="ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***&#xD;&#xA;could not read &quot;C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/sim/tv/rtldatafile/sim/report/cosim.log&quot;: no such file or directory&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/cosim.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Users/tmcphill/GitRepos/fpga-components/stochastic/lfsr/vivado-hls/lfsr/ultrazed-unrolled-loop/cosim.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:11:17.345-0700"/>
+        <logs message="ERROR: [COSIM 212-344] Rtl simulation failed." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:11:17.270-0700"/>
+        <logs message="ERROR: [COSIM 212-303] Aborting co-simulation: RTL simulation failed.  " projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:11:17.254-0700"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>
@@ -12,9 +16,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:23.211-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:20.380-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-27T00:21:15.533-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:09:31.155-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:09:29.449-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed-unrolled-loop" date="2017-05-29T14:09:26.715-0700" type="Warning"/>
         <logs message="WARNING: [RTGEN 206-101] Register 'r' is power-on initialization." projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:24.131-0700" type="Warning"/>
         <logs message="WARNING: [HLS 200-40] " projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:22.136-0700" type="Warning"/>
         <logs message="WARNING: [HLS 200-40] In file included from ../src/cpp/simple_lfsr_tb.cpp:5:&#xD;&#xA;../src/cpp/simple_lfsr.h:7:28: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]&#xD;&#xA;                unsigned int const value = (1 &lt;&lt; N) - 1;&#xD;&#xA;                                         ^&#xD;&#xA;1 warning generated." projectName="lfsr" solutionName="ultrazed" date="2017-05-27T00:19:17.654-0700" type="Warning"/>
